@@ -1,0 +1,51 @@
+\usepackage[]{algorithm2e}
+\usepackage{cite}
+\usepackage{calc}
+\usepackage{minted}
+\usepackage{fancyhdr}
+\usepackage{lipsum}
+\usepackage{color}
+\usepackage{ragged2e}
+\usepackage[inline]{enumitem}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage{float}
+\usepackage{tabu}
+\usepackage{hyperref}
+\usepackage{xepersian}
+\usepackage{minted}
+\usepackage{csvsimple}
+
+
+\settextfont[BoldFont={XB Yas Bd}, ItalicFont={XB Yas It}, BoldItalicFont={XB Yas BdIt}, Extension = .ttf]{XB Yas}
+
+
+\fancyhead[L]{\includegraphics[scale = 0.07]{images/IUST_logo_color.png}}
+\fancyhead[R]{\large \Course}
+% \fancyhead[C]{\Large \Subject}
+\renewcommand{\headrulewidth}{0.5mm}
+\pagestyle{fancy}
+\setlength{\headheight}{28pt}
+
+\setminted{
+    frame=lines,
+    framesep=2mm,
+    baselinestretch=1.0,
+    xrightmargin=0in,
+    xleftmargin=0in,
+    fontsize=\footnotesize,
+    linenos=false
+}
+
+\newcommand{\grayBox}[1]{\colorbox{gray!10}{\lr{\texttt{#1}}}}
+\newcommand{\grayLBox}[1]{\fbox{\grayBox{\parbox{11.8 cm}{#1}}}}
+
+\makeatletter
+\newcommand{\chapterauthor}[1]{%
+    {\parindent0pt\vspace*{-25pt}%
+        \linespread{1.1}\large\scshape#1%
+        \par\nobreak\vspace*{35pt}}
+    \@afterheading%
+}
+\makeatother
